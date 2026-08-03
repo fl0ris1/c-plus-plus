@@ -9,11 +9,11 @@ int main(){
 
    srand(time(0)); //seed time(0)=time(NULL)
    
-   number=(rand()%6)+1;
+   number=(rand()%100)+1; //1-100. without +1 after it will be 0-99
    
    do{
 	attempts++;
-   	std::cout<<"Input a number between 1-6: ";
+   	std::cout<<"Input a number between 1-100: ";
 	std::cin>>guess; //add "too high" or "too low" for guesses
 
     if(guess>number){
