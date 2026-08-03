@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime> //for pc
 
 int main(){
 	int number;
@@ -14,6 +15,13 @@ int main(){
 	attempts++;
    	std::cout<<"Input a number between 1-6: ";
 	std::cin>>guess; //add "too high" or "too low" for guesses
+
+    if(guess>number){
+        std::cout<<"Lower!"<<'\n';
+    }
+    else{
+        std::cout<<"Higher!"<<'\n';
+    }
    }while(guess!=number);
    
    std::cout<<"You guessed it in "<<attempts<<" guesses"<<"\nThe number was: "<<number;
